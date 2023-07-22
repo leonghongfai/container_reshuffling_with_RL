@@ -1,0 +1,37 @@
+{
+  "training": {
+    "gamma": 0.997,
+    "lr": 0.001,
+    "lr_schedule": [[0,0.01],[1000000,0.0001]],
+    "train_batch_size": 1000
+  },
+  "environment": {
+    "invalid_move_penalty": -5.0,
+    "shuffle_moves_limit": 30,
+    "done_cost": 0
+  },
+  "rollouts": {
+    "num_rollout_workers": 1,
+    "num_envs_per_worker": 1,
+    "rollout_fragment_length": "auto",
+    "horizon": 30
+  },
+  "resources": {
+    "num_gpus": 0,
+    "num_cpus": 2
+  },
+  "stop": {
+    "training_iterations": 1,
+    "timesteps_total": 1000000
+  },
+  "view": {
+    "color": false,
+    "view_tf_agent": false
+  },
+  "lying_data_path": "./input/shuffleSlots.xlsx",
+  "planned_data_path": "./input/planBox_forShuffling_p123.xlsx",
+  "box_freeze": true,
+  "empty_levels_threshold": 3,
+  "mix_weight_ground_rows_height": 2,
+  "continueFmModel1": false
+}
